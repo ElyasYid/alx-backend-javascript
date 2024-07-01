@@ -1,7 +1,10 @@
 /**
  * Creates a buffer array with a given position set to a given value.
- * @param {{length, position, value}}
- * @returns {DataView}
+ * @param {number} length - The length of the buffer.
+ * @param {number} position - The position to modify.
+ * @param {number} value - The value to be stored in the position.
+ * @returns {DataView} - Dataview representing buffer
+ * @throws {Error} If the position is outside the range of the buffer.
  */
 export default function createInt8TypedArray(length, position, value) {
   if (position >= length) {
